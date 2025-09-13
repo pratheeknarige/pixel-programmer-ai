@@ -65,7 +65,7 @@ export function CodeDemo() {
             Analyze Code
           </Button>
         </div>
-        <div className="bg-slate-900 text-green-400 p-6 rounded-lg min-h-[120px] max-h-[300px] overflow-y-auto">
+        <div className="bg-slate-900 dark:bg-slate-800 text-green-400 p-6 rounded-lg min-h-[120px] max-h-[300px] overflow-y-auto">
           <pre className="whitespace-pre-wrap text-sm font-mono">
             {output || "Analysis results will appear here..."}
           </pre>
