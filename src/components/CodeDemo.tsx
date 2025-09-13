@@ -43,30 +43,30 @@ export function CodeDemo() {
   }
 
   return (
-    <Card className="max-w-4xl mx-auto shadow-card bg-card">
-      <CardHeader className="text-center">
-        <CardTitle className="text-3xl font-bold mb-2">Try Code Analysis</CardTitle>
+    <Card className="w-full max-w-5xl mx-auto shadow-card bg-card">
+      <CardHeader className="text-center px-4 sm:px-6 lg:px-8">
+        <CardTitle className="text-2xl sm:text-3xl font-bold mb-2">Try Code Analysis</CardTitle>
       </CardHeader>
-      <CardContent className="p-8">
+      <CardContent className="p-4 sm:p-6 lg:p-8">
         <Textarea
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          className="min-h-[180px] mb-6 text-sm"
+          className="min-h-[120px] sm:min-h-[180px] mb-4 sm:mb-6 text-xs sm:text-sm leading-relaxed"
           placeholder="Enter your code here..."
           spellCheck={false}
         />
-        <div className="text-center mb-6">
+        <div className="text-center mb-4 sm:mb-6">
           <Button 
             variant="analyze" 
             size="lg" 
             onClick={analyzeCode}
-            className="px-10 py-3 text-lg rounded-full"
+            className="w-full sm:w-auto px-8 sm:px-10 py-3 text-base sm:text-lg rounded-full"
           >
             Analyze Code
           </Button>
         </div>
-        <div className="bg-slate-900 dark:bg-slate-800 text-green-400 p-6 rounded-lg min-h-[120px] max-h-[300px] overflow-y-auto">
-          <pre className="whitespace-pre-wrap text-sm font-mono">
+        <div className="bg-slate-900 dark:bg-slate-800 text-green-400 p-4 sm:p-6 rounded-lg min-h-[100px] sm:min-h-[120px] max-h-[250px] sm:max-h-[300px] overflow-y-auto">
+          <pre className="whitespace-pre-wrap text-xs sm:text-sm font-mono leading-relaxed">
             {output || "Analysis results will appear here..."}
           </pre>
         </div>
